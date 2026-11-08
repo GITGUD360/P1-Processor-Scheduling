@@ -1,0 +1,5 @@
+.reg F1 3
+.reg F2 2
+FADD F1, F1, F2
+FMUL F1, F1, F2
+FSUB F3, F1, F2

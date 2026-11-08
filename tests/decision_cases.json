@@ -1,0 +1,442 @@
+[
+  {
+    "id": "G1",
+    "model": "inorder",
+    "args": [
+      0,
+      0,
+      0
+    ],
+    "expected": 0,
+    "why": "Ready head + free FU; older work need not have completed."
+  },
+  {
+    "id": "G1",
+    "model": "inorder",
+    "args": [
+      0,
+      0,
+      1
+    ],
+    "expected": 0,
+    "why": "Ready head + free FU; older work need not have completed."
+  },
+  {
+    "id": "G1",
+    "model": "inorder",
+    "args": [
+      0,
+      1,
+      0
+    ],
+    "expected": 0,
+    "why": "Ready head + free FU; older work need not have completed."
+  },
+  {
+    "id": "G1",
+    "model": "inorder",
+    "args": [
+      0,
+      1,
+      1
+    ],
+    "expected": 0,
+    "why": "Ready head + free FU; older work need not have completed."
+  },
+  {
+    "id": "G1",
+    "model": "inorder",
+    "args": [
+      1,
+      0,
+      0
+    ],
+    "expected": 0,
+    "why": "Ready head + free FU; older work need not have completed."
+  },
+  {
+    "id": "G1",
+    "model": "inorder",
+    "args": [
+      1,
+      0,
+      1
+    ],
+    "expected": 0,
+    "why": "Ready head + free FU; older work need not have completed."
+  },
+  {
+    "id": "G1",
+    "model": "inorder",
+    "args": [
+      1,
+      1,
+      0
+    ],
+    "expected": 1,
+    "why": "Ready head + free FU; older work need not have completed."
+  },
+  {
+    "id": "G1",
+    "model": "inorder",
+    "args": [
+      1,
+      1,
+      1
+    ],
+    "expected": 1,
+    "why": "Ready head + free FU; older work need not have completed."
+  },
+  {
+    "id": "G2",
+    "model": "scoreboard",
+    "args": [
+      0,
+      0,
+      0
+    ],
+    "expected": 0,
+    "why": "Issue needs a free row/FU and no pending destination writer, not an empty processor."
+  },
+  {
+    "id": "G2",
+    "model": "scoreboard",
+    "args": [
+      0,
+      0,
+      1
+    ],
+    "expected": 0,
+    "why": "Issue needs a free row/FU and no pending destination writer, not an empty processor."
+  },
+  {
+    "id": "G2",
+    "model": "scoreboard",
+    "args": [
+      0,
+      1,
+      0
+    ],
+    "expected": 0,
+    "why": "Issue needs a free row/FU and no pending destination writer, not an empty processor."
+  },
+  {
+    "id": "G2",
+    "model": "scoreboard",
+    "args": [
+      0,
+      1,
+      1
+    ],
+    "expected": 0,
+    "why": "Issue needs a free row/FU and no pending destination writer, not an empty processor."
+  },
+  {
+    "id": "G2",
+    "model": "scoreboard",
+    "args": [
+      1,
+      0,
+      0
+    ],
+    "expected": 1,
+    "why": "Issue needs a free row/FU and no pending destination writer, not an empty processor."
+  },
+  {
+    "id": "G2",
+    "model": "scoreboard",
+    "args": [
+      1,
+      0,
+      1
+    ],
+    "expected": 1,
+    "why": "Issue needs a free row/FU and no pending destination writer, not an empty processor."
+  },
+  {
+    "id": "G2",
+    "model": "scoreboard",
+    "args": [
+      1,
+      1,
+      0
+    ],
+    "expected": 0,
+    "why": "Issue needs a free row/FU and no pending destination writer, not an empty processor."
+  },
+  {
+    "id": "G2",
+    "model": "scoreboard",
+    "args": [
+      1,
+      1,
+      1
+    ],
+    "expected": 0,
+    "why": "Issue needs a free row/FU and no pending destination writer, not an empty processor."
+  },
+  {
+    "id": "G3",
+    "model": "scoreboard",
+    "args": [
+      0,
+      0,
+      0
+    ],
+    "expected": 0,
+    "why": "WAR blocks only a same-register older source that is ready but not yet read."
+  },
+  {
+    "id": "G3",
+    "model": "scoreboard",
+    "args": [
+      0,
+      1,
+      0
+    ],
+    "expected": 0,
+    "why": "WAR blocks only a same-register older source that is ready but not yet read."
+  },
+  {
+    "id": "G3",
+    "model": "scoreboard",
+    "args": [
+      1,
+      0,
+      0
+    ],
+    "expected": 0,
+    "why": "WAR blocks only a same-register older source that is ready but not yet read."
+  },
+  {
+    "id": "G3",
+    "model": "scoreboard",
+    "args": [
+      1,
+      1,
+      0
+    ],
+    "expected": 1,
+    "why": "WAR blocks only a same-register older source that is ready but not yet read."
+  },
+  {
+    "id": "G4",
+    "model": "tomasulo",
+    "args": [
+      0,
+      0,
+      0
+    ],
+    "expected": 0,
+    "why": "RS admission is distinct from execution; FU busy alone does not block issue."
+  },
+  {
+    "id": "G4",
+    "model": "tomasulo",
+    "args": [
+      0,
+      0,
+      1
+    ],
+    "expected": 0,
+    "why": "RS admission is distinct from execution; FU busy alone does not block issue."
+  },
+  {
+    "id": "G4",
+    "model": "tomasulo",
+    "args": [
+      0,
+      1,
+      0
+    ],
+    "expected": 0,
+    "why": "RS admission is distinct from execution; FU busy alone does not block issue."
+  },
+  {
+    "id": "G4",
+    "model": "tomasulo",
+    "args": [
+      0,
+      1,
+      1
+    ],
+    "expected": 0,
+    "why": "RS admission is distinct from execution; FU busy alone does not block issue."
+  },
+  {
+    "id": "G4",
+    "model": "tomasulo",
+    "args": [
+      1,
+      0,
+      0
+    ],
+    "expected": 1,
+    "why": "RS admission is distinct from execution; FU busy alone does not block issue."
+  },
+  {
+    "id": "G4",
+    "model": "tomasulo",
+    "args": [
+      1,
+      0,
+      1
+    ],
+    "expected": 1,
+    "why": "RS admission is distinct from execution; FU busy alone does not block issue."
+  },
+  {
+    "id": "G4",
+    "model": "tomasulo",
+    "args": [
+      1,
+      1,
+      0
+    ],
+    "expected": 1,
+    "why": "RS admission is distinct from execution; FU busy alone does not block issue."
+  },
+  {
+    "id": "G4",
+    "model": "tomasulo",
+    "args": [
+      1,
+      1,
+      1
+    ],
+    "expected": 1,
+    "why": "RS admission is distinct from execution; FU busy alone does not block issue."
+  },
+  {
+    "id": "G5",
+    "model": "tomasulo",
+    "args": [
+      0,
+      0,
+      0
+    ],
+    "expected": 0,
+    "why": "A nonzero source producer tag means the needed value must be awaited."
+  },
+  {
+    "id": "G5",
+    "model": "tomasulo",
+    "args": [
+      1,
+      0,
+      0
+    ],
+    "expected": 1,
+    "why": "A nonzero source producer tag means the needed value must be awaited."
+  },
+  {
+    "id": "G5",
+    "model": "tomasulo",
+    "args": [
+      2,
+      0,
+      0
+    ],
+    "expected": 1,
+    "why": "A nonzero source producer tag means the needed value must be awaited."
+  },
+  {
+    "id": "G5",
+    "model": "tomasulo",
+    "args": [
+      4,
+      0,
+      0
+    ],
+    "expected": 1,
+    "why": "A nonzero source producer tag means the needed value must be awaited."
+  },
+  {
+    "id": "G5",
+    "model": "tomasulo",
+    "args": [
+      8,
+      0,
+      0
+    ],
+    "expected": 1,
+    "why": "A nonzero source producer tag means the needed value must be awaited."
+  },
+  {
+    "id": "G5",
+    "model": "tomasulo",
+    "args": [
+      16,
+      0,
+      0
+    ],
+    "expected": 1,
+    "why": "A nonzero source producer tag means the needed value must be awaited."
+  },
+  {
+    "id": "G6",
+    "model": "tomasulo",
+    "args": [
+      0,
+      1,
+      0
+    ],
+    "expected": 0,
+    "why": "Only the still-current producer may overwrite its architectural destination."
+  },
+  {
+    "id": "G6",
+    "model": "tomasulo",
+    "args": [
+      1,
+      1,
+      0
+    ],
+    "expected": 1,
+    "why": "Only the still-current producer may overwrite its architectural destination."
+  },
+  {
+    "id": "G6",
+    "model": "tomasulo",
+    "args": [
+      1,
+      2,
+      0
+    ],
+    "expected": 0,
+    "why": "Only the still-current producer may overwrite its architectural destination."
+  },
+  {
+    "id": "G6",
+    "model": "tomasulo",
+    "args": [
+      8,
+      8,
+      0
+    ],
+    "expected": 1,
+    "why": "Only the still-current producer may overwrite its architectural destination."
+  },
+  {
+    "id": "G6",
+    "model": "tomasulo",
+    "args": [
+      3,
+      7,
+      0
+    ],
+    "expected": 0,
+    "why": "Only the still-current producer may overwrite its architectural destination."
+  },
+  {
+    "id": "G6",
+    "model": "tomasulo",
+    "args": [
+      16,
+      16,
+      0
+    ],
+    "expected": 1,
+    "why": "Only the still-current producer may overwrite its architectural destination."
+  }
+]
